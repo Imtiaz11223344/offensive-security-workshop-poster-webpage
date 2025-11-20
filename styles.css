@@ -1,0 +1,114 @@
+:root{
+  --bg:#07123b;
+  --card-bg: rgba(255,255,255,0.03);
+  --accent:#ff5b57;
+  --muted:#b9c8ff;
+  --glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Roboto,Arial;
+  background:var(--bg);
+  color:#fff;
+}
+
+.container{
+  max-width:1100px;
+  margin:24px auto;
+  padding:16px;
+}
+
+.header{
+  text-align:center;
+}
+.header h1{
+  font-family:Montserrat;
+  font-size:32px;
+  color:var(--accent);
+}
+.header .lead{
+  color:var(--muted);
+  margin-top:-8px;
+}
+
+/* Poster */
+.poster-img{
+  width:100%;
+  max-width:900px;
+  display:block;
+  margin:auto;
+  border-radius:12px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* Details */
+.details{
+  background:var(--card-bg);
+  padding:18px;
+  border-radius:10px;
+  margin-top:20px;
+}
+.details h2{
+  text-align:center;
+  color:var(--muted);
+  margin-bottom:12px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+
+.card{
+  background:var(--glass);
+  padding:14px;
+  border-radius:10px;
+}
+
+.card h3{
+  margin-top:0;
+  color:var(--muted);
+}
+
+.two-cols{
+  display:flex;
+  gap:16px;
+}
+
+/* Register & Contact */
+.register-row{
+  display:flex;
+  justify-content:space-between;
+  margin-top:16px;
+  flex-wrap:wrap;
+}
+.register-link, .download{
+  padding:10px 14px;
+  text-decoration:none;
+  color:#07123b;
+  background:#fff;
+  font-weight:bold;
+  border-radius:8px;
+}
+
+.download{
+  background:var(--accent);
+  color:#fff;
+}
+
+.contact{
+  margin-top:18px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  color:var(--muted);
+}
+
+@media(min-width:900px){
+  .grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
